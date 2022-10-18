@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: "update the package"
+    apt:
+      update_cache: true
+      force_apt_get: true
+      
+    - name: "install Apche server" 
+      apt:
+        name: apache1
+        state: latest
+        
+    - name: "copying file with playbook"
+      copy:
+        src: index.html
+        dest: /var/ww/html
+        mode: 755
+        

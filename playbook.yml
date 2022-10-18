@@ -15,6 +15,6 @@
     - name: "copying file with playbook"
       copy:
         src: index.html
-        dest: /var/ww/html
+        dest: /var/www/html
         mode: 755
         

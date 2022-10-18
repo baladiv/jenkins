@@ -3,9 +3,9 @@
   become: true
   tasks:
     - name: "update the package"
-    apt:
-      update_cache: true
-      force_apt_get: true
+      apt:
+        update_cache: true
+        force_apt_get: true
       
     - name: "install Apche server" 
       apt:

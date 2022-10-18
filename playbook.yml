@@ -9,7 +9,7 @@
       
     - name: "install Apche server" 
       apt:
-        name: apache1
+        name: apache2
         state: latest
         
     - name: "copying file with playbook"

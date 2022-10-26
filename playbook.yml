@@ -11,6 +11,13 @@
       apt:
         name: apache2
         state: latest
+
+    - name: "Create document root"
+      file:
+        path: "/var/www/html"
+        state: directory
+        owner: "ubuntu"
+        mode: 0755
         
     - name: "copying file with playbook"
       copy:
